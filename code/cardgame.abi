@@ -1,0 +1,54 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Thu Nov 15 10:28:56 2018",
+    "version": "eosio::abi/1.1",
+    "structs": [
+        {
+            "name": "login",
+            "base": "",
+            "fields": [
+                {
+                    "name": "username",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "user_info",
+            "base": "",
+            "fields": [
+                {
+                    "name": "name",
+                    "type": "name"
+                },
+                {
+                    "name": "win_count",
+                    "type": "uint16"
+                },
+                {
+                    "name": "lost_count",
+                    "type": "uint16"
+                }
+            ]
+        }
+    ],
+    "types": [],
+    "actions": [
+        {
+            "name": "login",
+            "type": "login",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "users",
+            "type": "user_info",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": [],
+    "abi_extensions": []
+}
