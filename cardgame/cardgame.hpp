@@ -102,6 +102,8 @@ CONTRACT cardgame : public contract {
                                 const card& ai_card, const std::vector<uint8_t> hand_player);
 
     int ai_choose_card(const game& game_data);
+    
+    void resolve_selected_cards(game& game_data);
 
     int random(const int range);
 
