@@ -88,6 +88,21 @@ CONTRACT cardgame : public contract {
 
     void draw_one_card(std::vector<uint8_t>& deck, std::vector<uint8_t>& hand);
 
+    int calculate_attack_point(const card& card1, const card& card2);
+
+    int ai_best_card_win_strategy(const int ai_attack_point, const int player_attack_point);
+
+    int ai_min_loss_strategy(const int ai_attack_point, const int player_attack_point);
+
+    int ai_points_tally_strategy(const int ai_attack_point, const int player_attack_point);
+
+    int ai_loss_prevention_strategy(const int8_t life_ai, const int ai_attack_point, const int player_attack_point);
+    
+    int calculate_ai_card_score(const int strategy_idx, const int8_t life_ai, 
+                                const card& ai_card, const std::vector<uint8_t> hand_player);
+
+    int ai_choose_card(const game& game_data);
+
     int random(const int range);
 
   public:
