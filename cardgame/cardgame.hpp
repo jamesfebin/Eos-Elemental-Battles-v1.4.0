@@ -105,6 +105,8 @@ CONTRACT cardgame : public contract {
     
     void resolve_selected_cards(game& game_data);
 
+    void update_game_status(user_info& user);
+
     int random(const int range);
 
   public:
@@ -116,6 +118,10 @@ CONTRACT cardgame : public contract {
     ACTION startgame(name username);
 
     ACTION playcard(name username, uint8_t player_card_idx);
+
+    ACTION nextround(name username);
+
+    ACTION endgame(name username);
 
 
 };
